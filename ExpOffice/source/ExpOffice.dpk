@@ -1,0 +1,60 @@
+package ExpOffice;
+
+{$R *.res}
+{$R 'ExportExtLVReg.dcr'}
+{$R 'ExportStringsReg.dcr'}
+{$R 'ExportXDBReg.dcr'}
+{$R 'ExportXReg.dcr'}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST ON}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'Exportador Office'}
+{$IMPLICITBUILD OFF}
+
+requires
+  vcl,
+  vcldb,
+  bdertl,
+  vclimg,
+  xmlrtl,
+  vclx,
+  Rave110VCL,
+  Splicenet;
+
+contains
+  xprogress in 'xprogress.pas' {ProgressForm},
+  EC_DataSet in 'EC_DataSet.pas',
+  EC_DBGrid in 'EC_DBGrid.pas',
+  EC_EnhLView in 'EC_EnhLView.pas',
+  EC_ExtLView in 'EC_ExtLView.pas',
+  EC_LView in 'EC_LView.pas',
+  EC_Main in 'EC_Main.pas',
+  EC_SGrid in 'EC_SGrid.pas',
+  EC_Strings in 'EC_Strings.pas',
+  EC_Table in 'EC_Table.pas',
+  EC_TStrings in 'EC_TStrings.pas',
+  ExportExtLVReg in 'ExportExtLVReg.pas',
+  ExportStringsReg in 'ExportStringsReg.pas',
+  ExportXDBReg in 'ExportXDBReg.pas',
+  ExportXReg in 'ExportXReg.pas',
+  EC_Choice in 'EC_Choice.pas' {ExportChoiceForm};
+
+end.
