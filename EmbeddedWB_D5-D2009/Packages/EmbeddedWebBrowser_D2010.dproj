@@ -1,0 +1,174 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{0BEDBF50-6C2F-436B-B7CC-B258A961AC00}</ProjectGuid>
+			<MainSource>EmbeddedWebBrowser_D2010.dpk</MainSource>
+			<Config Condition="'$(Config)'==''">Debug</Config>
+			<DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+			<ProjectVersion>12.0</ProjectVersion>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<DCC_DependencyCheckOutputName>C:\Users\Public\Documents\RAD Studio\7.0\Bpl\EmbeddedWebBrowser_D2010.bpl</DCC_DependencyCheckOutputName>
+			<DCC_UnitAlias>WinTypes=Windows;WinProcs=Windows;$(DCC_UnitAlias)</DCC_UnitAlias>
+			<DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+			<DCC_Description>Internet Embedded Web Browser Components</DCC_Description>
+			<DCC_DebugInformation>false</DCC_DebugInformation>
+			<DCC_AssertionsAtRuntime>false</DCC_AssertionsAtRuntime>
+			<GenDll>true</GenDll>
+			<DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+			<GenPackage>true</GenPackage>
+			<DCC_ImageBase>00400000</DCC_ImageBase>
+			<DCC_Platform>x86</DCC_Platform>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+			<DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+			<DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+			<DCC_DebugInformation>false</DCC_DebugInformation>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+		</PropertyGroup>
+		<ItemGroup>
+			<DelphiCompile Include="EmbeddedWebBrowser_D2010.dpk">
+				<MainSource>MainSource</MainSource>
+			</DelphiCompile>
+			<DCCReference Include="..\Source\EWB.dcr"/>
+			<DCCReference Include="designide.dcp"/>
+			<DCCReference Include="rtl.dcp"/>
+			<DCCReference Include="vcl.dcp"/>
+			<DCCReference Include="vclimg.dcp"/>
+			<DCCReference Include="..\Source\EmbeddedWB.pas"/>
+			<DCCReference Include="..\Source\AppWebUpdater.pas"/>
+			<DCCReference Include="..\Source\AppWUStrings.pas"/>
+			<DCCReference Include="..\Source\ExportFavorites.pas"/>
+			<DCCReference Include="..\Source\IEParser.pas"/>
+			<DCCReference Include="..\Source\FavMenu.pas"/>
+			<DCCReference Include="..\Source\FavoritesListView.pas"/>
+			<DCCReference Include="..\Source\FavoritesTree.pas"/>
+			<DCCReference Include="..\Source\HistoryListView.pas"/>
+			<DCCReference Include="..\Source\HistoryMenu.pas"/>
+			<DCCReference Include="..\Source\IECache.pas"/>
+			<DCCReference Include="..\Source\IEDownload.pas"/>
+			<DCCReference Include="..\Source\IEMultiDownload.pas"/>
+			<DCCReference Include="..\Source\IEDownloadStrings.pas"/>
+			<DCCReference Include="..\Source\IEDownloadAcc.pas"/>
+			<DCCReference Include="..\Source\IETravelLog.pas"/>
+			<DCCReference Include="..\Source\ImportFavorites.pas"/>
+			<DCCReference Include="..\Source\LibXmlComps.pas"/>
+			<DCCReference Include="..\Source\LibXmlParser.pas"/>
+			<DCCReference Include="..\Source\LinksBar.pas"/>
+			<DCCReference Include="..\Source\RichEditBrowser.pas"/>
+			<DCCReference Include="..\Source\SecurityManager.pas"/>
+			<DCCReference Include="..\Source\SendMail_For_Ewb.pas"/>
+			<DCCReference Include="..\Source\UrlHistory.pas"/>
+			<DCCReference Include="..\Source\Edithost.pas"/>
+			<DCCReference Include="..\Source\EditDesigner.pas"/>
+			<DCCReference Include="..\Source\IEAddress.pas"/>
+			<DCCReference Include="..\Source\EwbEditors.pas"/>
+			<DCCReference Include="..\Source\EwbReg.pas"/>
+			<DCCReference Include="..\Source\Browse4Folder.pas"/>
+			<DCCReference Include="..\Source\FileExtAssociate.pas"/>
+			<DCCReference Include="..\Source\LinksLabel.pas"/>
+			<DCCReference Include="..\Source\IeConst.pas"/>
+			<DCCReference Include="..\Source\EwbAcc.pas"/>
+			<DCCReference Include="..\Source\EwbTools.pas"/>
+			<DCCReference Include="..\Source\DirMonitor.pas"/>
+			<DCCReference Include="..\Source\HighLightXML.pas"/>
+			<DCCReference Include="..\Source\HighLightHTML.pas"/>
+			<DCCReference Include="..\Source\Mshtml_Ewb.pas"/>
+			<DCCReference Include="..\Source\HighLightRichSyntax.pas"/>
+			<DCCReference Include="..\Source\SHDocVw_EWB.pas"/>
+			<DCCReference Include="..\Source\UI_Less.pas"/>
+			<DCCReference Include="..\Source\EwbCore.pas"/>
+			<DCCReference Include="..\Source\MenuContext.pas"/>
+			<DCCReference Include="..\Source\FavoritesPopup.pas"/>
+			<DCCReference Include="..\Source\EwbDDE.pas"/>
+			<DCCReference Include="..\Source\EwbCoreTools.pas"/>
+			<DCCReference Include="..\Source\EwbClasses.pas"/>
+			<DCCReference Include="..\Source\EwbBehaviorsComp.pas"/>
+			<DCCReference Include="..\Source\EwbEvents.pas"/>
+			<DCCReference Include="..\Source\EwbEventsComp.pas"/>
+			<DCCReference Include="..\Source\EwbActns.pas"/>
+			<DCCReference Include="..\Source\EwbUrl.pas"/>
+			<DCCReference Include="..\Source\IEDownloadTools.pas"/>
+			<DCCReference Include="..\Source\wbhFixes.pas"/>
+			<DCCReference Include="..\Source\MSHTMLEvents.pas"/>
+			<DCCReference Include="..\Source\EwbControlComponent.pas"/>
+			<DCCReference Include="..\Source\EwbMouseHook.pas"/>
+			<DCCReference Include="..\Source\EwbFocusControl.pas"/>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')"/>
+		<ProjectExtensions>
+			<Borland.Personality>Delphi.Personality.12</Borland.Personality>
+			<Borland.ProjectType>Package</Borland.ProjectType>
+			<BorlandProject>
+				<Delphi.Personality>
+					<Source>
+						<Source Name="MainSource">EmbeddedWebBrowser_D2010.dpk</Source>
+					</Source>
+					<Parameters>
+						<Parameters Name="UseLauncher">False</Parameters>
+						<Parameters Name="LoadAllSymbols">True</Parameters>
+						<Parameters Name="LoadUnspecifiedSymbols">False</Parameters>
+					</Parameters>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">True</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">False</VersionInfo>
+						<VersionInfo Name="MajorVer">1</VersionInfo>
+						<VersionInfo Name="MinorVer">0</VersionInfo>
+						<VersionInfo Name="Release">0</VersionInfo>
+						<VersionInfo Name="Build">0</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">False</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">1046</VersionInfo>
+						<VersionInfo Name="CodePage">1252</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName"/>
+						<VersionInfoKeys Name="FileDescription"/>
+						<VersionInfoKeys Name="FileVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName"/>
+						<VersionInfoKeys Name="LegalCopyright"/>
+						<VersionInfoKeys Name="LegalTrademarks"/>
+						<VersionInfoKeys Name="OriginalFilename"/>
+						<VersionInfoKeys Name="ProductName"/>
+						<VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="Comments"/>
+					</VersionInfoKeys>
+					<Excluded_Packages>
+						<Excluded_Packages Name="C:\Users\Public\Documents\RAD Studio\7.0\Bpl\SpartanPack.bpl">(untitled)</Excluded_Packages>
+						<Excluded_Packages Name="$(BDS)\bin\samplevisualizers140.bpl">Embarcadero Sample Debugger Visualizers</Excluded_Packages>
+						<Excluded_Packages Name="C:\Users\Developer\AppData\Roaming\IntraWeb XIV\Bin\dclintraweb_14_D2010.bpl">IntraWeb 14.0 Design Package for CodeGear RAD Studio 2010</Excluded_Packages>
+					</Excluded_Packages>
+				</Delphi.Personality>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+	</Project>
